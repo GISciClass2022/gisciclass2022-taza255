@@ -1,0 +1,75 @@
+---
+title: "Untitled"
+author: "ST"
+date: "2022/4/19"
+output: html_document
+---
+
+```{r chapter2-1}
+# comment
+4+5
+log(5)
+exp(9)
+sqrt(144)
+```
+
+```{r chapter2-2}
+# object lesson
+my_obj <- 9
+My_obj <- 8
+#大文字小文字は別
+
+my_obj2 <- "R is cool."
+print(my_obj2)
+
+# add lesson
+my_obj + My_obj #OK
+#my_obj + my_obj2 #NG
+
+my_obj3 <- "Hey!"
+#my_obj2 + my_obj3 #NG
+
+paste(my_obj3, my_obj2)
+```
+
+```{r chapter2-3}
+# vector lesson
+my_vec <- c(2,3,1,6,4,3,3,7)
+print(my_vec)
+
+mean(my_vec) #
+var(my_vec) #
+sd(my_vec) #
+length(my_vec) #ベクトルのサイズ
+
+my_vec2 <- c(2,3,1,6,4,3,3,7,NA)
+var(my_vec2, na.rm = T)
+
+my_seq <- 1:10
+print(1:10)
+my_seq <- seq(from=1, to=5, by=0.5)
+print(my_seq)
+```
+
+```{r chapter2-4}
+print(my_vec)
+my_vec[2]
+val_3 <- my_vec[3]
+
+my_vec[c(1,5,6,8)]
+
+id <- c(1,5,6,8)
+print(my_vec[id])
+
+my_vec[my_vec > 4]
+
+id2 <- my_vec > 4
+print(my_vec[id2])
+
+id3 <- ((my_vec < 6) & (my_vec > 2))
+my_vec[id3]
+
+id4 <- ((my_vec > 6) | (my_vec <= 2))
+my_vec[id4]
+```
+
